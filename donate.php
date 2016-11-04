@@ -9,7 +9,7 @@ $config = require('config.php');
 // Force https
 if ($config['test-mode'] && $_SERVER['HTTPS'] != 'on') {
     header('HTTP/1.1 301 Moved Permanently');
-    header('Location: http://' . $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"]);
+    header('Location: https://' . $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"]);
     exit;
 }
 
