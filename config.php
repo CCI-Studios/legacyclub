@@ -6,10 +6,10 @@ return array(
     'test-mode'       => false,
 
     // Secret Key from Stripe.com Dashboard
-    'secret-key'      => 'sk_test_Kwh90MTo8Kz9tyx0YcbKm664',
+    'secret-key'      => getenv(STRIPE_SECRET_KEY),
 
     // Publishable Key from Stripe.com Dashboard
-    'publishable-key' => 'pk_test_nQ4wxaesLHjZJsYye8rYHaxI',
+    'publishable-key' => getenv(STRIPE_PUBLISHABLE_KEY),
 
     // Where to send upon successful donation (must include http://)
     'thank-you'       => 'http://legacyclub.ccistaging.com/thankyou.html',

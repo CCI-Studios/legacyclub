@@ -1,6 +1,7 @@
 <?php
 	require_once 'inc/MCAPI.class.php';
-	$api = new MCAPI('46942be14803417cb279135d055f23f3-us14');
+	$apikey = getenv(MAILCHIMP_API_KEY);
+	$api = new MCAPI($apikey);
 	$merge_vars = array('FNAME'=>$_POST["fname"], 'LNAME'=>$_POST["lname"]);
 
 	// Submit subscriber data to MailChimp
