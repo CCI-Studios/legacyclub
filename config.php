@@ -12,7 +12,7 @@ return array(
     'publishable-key' => getenv(STRIPE_PUBLISHABLE_KEY),
 
     // Where to send upon successful donation (must include http://)
-    'thank-you'       => 'http://legacyclub.ccistaging.com/thankyou.html',
+    'thank-you'       => 'https://legacy-club.herokuapp.com/thankyou.html',
 
     // Who the email will be from.
     'email-from'      => 'info@legacyclub.ca',
