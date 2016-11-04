@@ -1,5 +1,10 @@
 {
     "require": { 
-        "ext-mbstring": "*"
-    }
+        "ext-mbstring": "*",
+        "stripe/stripe-php": "3.*"
+    },
+    "name":"goldenplanet/mailchimp",
+  	"autoload":{
+	    "classmap": ["inc/MCAPI.class.php"]
+  	}
 }

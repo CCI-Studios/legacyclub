@@ -1,7 +1,7 @@
 <?php
 
 // Load Stripe
-require('lib/Stripe.php');
+require('vendor/stripe/stripe-php/init.php');
 
 // Load configuration settings
 $config = require('config.php');
@@ -14,7 +14,7 @@ if ($config['test-mode'] && $_SERVER['HTTPS'] != 'on') {
 }
 
 if ($_POST) {
-    Stripe::setApiKey($config['secret-key']);
+    \Stripe\Stripe::setApiKey($config['secret-key']);
 
     // POSTed Variables
     $token      = $_POST['stripeToken'];
@@ -32,7 +32,7 @@ if ($_POST) {
         }
 
         // Charge the card
-        $donation = Stripe_Charge::create(array(
+        $donation = \Stripe\Charge::create(array(
             'card'        => $token,
             'description' => 'Donation by ' . $name . ' (' . $email . ')',
             'amount'      => $amount * 100,
