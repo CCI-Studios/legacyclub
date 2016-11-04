@@ -36,7 +36,9 @@ if ($_POST) {
             'card'        => $token,
             'description' => 'Donation by ' . $name . ' (' . $email . ')',
             'amount'      => $amount * 100,
-            'currency'    => 'cad'
+            'currency'    => 'cad',
+            'shippingAddress' => true,
+            'billingAddress' => true
         ));
 
         
