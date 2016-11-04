@@ -3,7 +3,7 @@
 return array(
 
     // Enable test mode (not require HTTPS)
-    'test-mode'       => false,
+    'test-mode'       => true,
 
     // Secret Key from Stripe.com Dashboard
     'secret-key'      => getenv(STRIPE_SECRET_KEY),
