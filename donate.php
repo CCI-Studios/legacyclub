@@ -37,7 +37,7 @@ if ($_POST) {
             'description' => 'Donation by ' . $name . ' (' . $email . ')',
             'amount'      => $amount * 100,
             'currency'    => 'cad',
-            'metadata'    =>  $address
+            "metadata" => array("address" => $address)
         ));
 
         
