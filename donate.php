@@ -37,7 +37,7 @@ if ($_POST) {
             'description' => 'Donation by ' . $name . ' (' . $email . ')',
             'amount'      => $amount * 100,
             'currency'    => 'cad',
-            "metadata" => array("address" => $address)
+            "metadata" => array("address" => $address,"Email" => $email,"Phone" => $phone)
         ));
 
         
@@ -101,7 +101,7 @@ if ($_POST) {
                     <div id="top-text">
                         <div>
                             <h1>Donation</h1>
-                            <div class="form">
+                            <div class="form donation">
                                 <div class="messages">
                                     <!-- Error messages go here go here -->
                                 </div>
@@ -159,8 +159,8 @@ if ($_POST) {
                                         </fieldset>
 
                                         <fieldset>
-                                            <legend>
-                                                Your Generous Donation
+                                           <legend>
+                                                Payment
                                             </legend>
                                             <div class="form-row form-amount">
                                                 <label>Amount:</label> <input type="text" name="amount" class="amount text">

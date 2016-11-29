@@ -361,19 +361,24 @@ form textarea
 	text-align: center;
 }
 
+.form.donation
+{
+	max-width: 560px;
+	margin: 0 auto;
+}
+
 .donation-form {
 	display: none;
 }
 
 .donation-form fieldset {
+	width: 100%;
 	border-radius: 10px;
 	border: 1px solid #eee;
-	display: inline-block;
-	min-height: 360px;
 	padding: 5px 20px 20px;
 	text-align: left;
 	vertical-align: top;
-	width: 320px;
+	margin-bottom: 20px;
 }
 
 .donation-form fieldset:first-child {
@@ -410,7 +415,6 @@ form textarea
 }
 
 .donation-form select.text {
-	margin-top: 4px;
 	height: 30px;
 }
 
@@ -428,7 +432,7 @@ form textarea
 
 .donation-form .form-first-name,
 .donation-form .form-last-name {
-	width: 152px;
+	width: 48%;
 }
 
 .donation-form .form-last-name {
@@ -455,9 +459,8 @@ form textarea
 .donation-form .form-amount label {
 	background-color: #fff;
 	cursor: pointer;
-	display: inline-block;
-	font-size: 16px;
 	line-height: 2;
+	margin-bottom: 0px;
 	width: 92px;
 	padding: 1px 4px;
 	-webkit-transition: all .2s linear;
