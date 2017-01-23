@@ -190,11 +190,11 @@ if ($_POST) {
                                             </div>
                                             <div class="form-row form-number">
                                                 <label>Card Number</label>
-                                                <input type="text" autocomplete="off" class="card-number text" value="4242424242424242">
+                                                <input type="text" autocomplete="off" class="card-number text" value="">
                                             </div>
                                             <div class="form-row form-cvc">
                                                 <label>CVC</label>
-                                                <input type="text" autocomplete="off" class="card-cvc text" value="123">
+                                                <input type="text" autocomplete="off" class="card-cvc text" value="">
                                             </div>
                                             <div class="form-row form-expiry">
                                                 <label>Expiration Date</label>
