@@ -2,6 +2,7 @@
 
 // Load Stripe
 require('vendor/stripe/stripe-php/init.php');
+require 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
 
 // Load configuration settings
 $config = require('config.php');
@@ -12,6 +13,8 @@ if ($config['test-mode'] && $_SERVER['HTTPS'] != 'on') {
     header('Location: https://' . $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"]);
     exit;
 }
+
+$mail = new PHPMailer;
 
 if ($_POST) {
     \Stripe\Stripe::setApiKey($config['secret-key']);
@@ -42,26 +45,46 @@ if ($_POST) {
 
         
         // Build and send the email
-        $headers = 'From: ' . $config['email-from'];
-        $headers .= "\r\nBcc: " . $config['email-bcc'] . "\r\n\r\n";
+       // $headers = 'From: ' . $config['email-from'];
+       // $headers .= "\r\nBcc: " . $config['email-bcc'] . "\r\n\r\n";
 
-        // Find and replace values
         $find    = array('%name%', '%amount%');
         $replace = array($name, '$' . $amount);
 
-        $message = str_replace($find, $replace , $config['email-message']) . "\n\n";
-        $message .= 'Amount: $' . $amount . "\n";
-        $message .= 'Address: ' . $address . "\n";
-        $message .= 'Phone: ' . $phone . "\n";
-        $message .= 'Email: ' . $email . "\n";
-        $message .= 'Date: ' . date('M j, Y, g:ia', $donation['created']) . "\n";
-        $message .= 'Transaction ID: ' . $donation['id'] . "\n\n\n";
+        $message = str_replace($find, $replace , $config['email-message'])."</br>";
+        $message .= '<p>Amount: $' . $amount . "</p>";
+        $message .= '<p>Address: ' . $address . "</p>";
+        $message .= '<p>Phone: ' . $phone . "</p>";
+        $message .= '<p>Email: ' . $email . "</p>";
+        $message .= '<p>Date: ' . date('M j, Y, g:ia', $donation['created']) . "</p>";
+        $message .= '<p>Transaction ID: ' . $donation['id'] . "</p>";
 
-        $subject = $config['email-subject'];
+        // Find and replace values
 
-        // Send it
-        if ( !$config['test-mode'] ) {
-            mail($email,$subject,$message,$headers);
+        $mail->isSMTP();                                      // Set mailer to use SMTP
+        $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+        $mail->SMTPAuth = true;                               // Enable SMTP authentication
+        $mail->Username = 'hsanvaria@ccistudios.com';                 // SMTP username
+        $mail->Password = $config['email-password'];                           // SMTP password
+        $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+        $mail->Port = 587;
+
+        $mail->setFrom($config['email-from'], 'Legacy club');     //Set who the message is to be sent from
+        $mail->addAddress($email, $first_name.' '.$last_name);  // Add a recipient
+        $mail->addBCC('bcc@example.com');
+        $mail->isHTML(true);                                  // Set email format to HTML
+
+        $mail->Subject = $config['email-subject'];
+        $mail->Body    = $message;
+        $mail->AltBody = $message;
+
+        //Read an HTML message body from an external file, convert referenced images to embedded,
+        //convert HTML into a basic plain-text alternative body
+
+        if(!$mail->send()) {
+           echo 'Message could not be sent.';
+           echo 'Mailer Error: ' . $mail->ErrorInfo;
+           exit;
         }
 
         // Forward to "Thank You" page
