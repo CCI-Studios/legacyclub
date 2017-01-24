@@ -344,7 +344,8 @@ form textarea
     margin: 20px 15px;
 }
 
-.submit
+.submit,
+.button
 {
 	background: #bba363;
 	width: 182px!important;
@@ -352,6 +353,12 @@ form textarea
 	text-transform: uppercase;
 	cursor: pointer;
 	margin: 0 auto;
+}
+
+.button
+{
+	padding: 10px;
+	text-align: center;
 }
 
 #response
@@ -526,6 +533,13 @@ form textarea
 
 .donation-form .submit-button:hover {
 	background-color: #119347;
+}
+
+.error
+{
+	color: red;
+	margin: 10px;
+	text-align: center;
 }
 
 .messages {

@@ -6,11 +6,12 @@ return array(
     'test-mode'       => false,
 
     // Secret Key from Stripe.com Dashboard
-    'secret-key'      => getenv(STRIPE_SECRET_KEY),
+    'secret-key'      => 'sk_test_Odk0oiVqpCqNtoactDrJpAEj',
 
     // Publishable Key from Stripe.com Dashboard
-    'publishable-key' => getenv(STRIPE_PUBLISHABLE_KEY),
-    'email-password' => getenv(EMAIL_PASSWORD),
+    'publishable-key' => 'pk_test_yM4AauPeQGQLXAJkdlB8Ypmu',
+
+    'email-password' => 'shashank@007',
 
     // Where to send upon successful donation (must include http://)
     'thank-you'       => 'https://legacy-club.herokuapp.com/thankyou.html',

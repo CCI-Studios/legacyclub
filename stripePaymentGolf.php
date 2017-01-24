@@ -21,13 +21,28 @@ if ($_POST) {
 
     // POSTed Variables
     $token      = $_POST['stripeToken'];
-    $first_name = $_POST['first-name'];
-    $last_name  = $_POST['last-name'];
-    $name       = $first_name . ' ' . $last_name;
-    $address    = $_POST['address'] . "\n" . $_POST['city'] . ', ' . $_POST['state'] . ' ' . $_POST['zip'];
-    $email      = $_POST['email'];
-    $phone      = $_POST['phone'];
-    $amount     = (float) $_POST['amount'];
+    $player = [];
+   
+    foreach($_POST['player'] as $key => $value) {
+
+            $first_name = $value['first-name'];
+            $name       = $first_name;
+            $address    = $value['address'] . "\n" . $value['city'];
+            $email      = $value['email'];
+            $phone      = $value['phone'];
+            $amount     = (float) $_POST['amount'];
+
+            $playerInfo = $name.','.$address.','.$email.','.$phone.','.$amount;
+
+            array_push($player,$playerInfo);
+        
+    }
+
+    echo '<pre>';
+    print_r($player);
+    echo '</pre>';
+    die;
+   
 
     try {
         if ( ! isset($_POST['stripeToken']) ) {
