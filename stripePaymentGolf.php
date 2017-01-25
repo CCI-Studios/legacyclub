@@ -51,7 +51,7 @@ if ($_POST) {
         
         $key++;
         $players .= "<p>Player# ".$key."</p>";
-        $players .= "<p>"$value."</p>";
+        $players .= "<p>".$value."</p>";
 
     }
 
