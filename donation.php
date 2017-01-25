@@ -37,12 +37,8 @@
                                                 Contact Information
                                             </legend>
                                             <div class="form-row form-first-name">
-                                                <label>First Name</label>
-                                                <input type="text" name="first-name" class="first-name text">
-                                            </div>
-                                            <div class="form-row form-last-name">
-                                                <label>Last Name</label>
-                                                <input type="text" name="last-name" class="last-name text">
+                                                <label>Name</label>
+                                                <input type="text" name="first-name" class="first-name name-bill text">
                                             </div>
                                             <div class="form-row form-email">
                                                 <label>Email</label>
@@ -54,7 +50,7 @@
                                             </div>
                                             <div class="form-row form-address">
                                                 <label>Address</label>
-                                                <textarea name="address" cols="30" rows="2" class="address text"></textarea>
+                                                <textarea name="address" cols="30" rows="2" class="address address-bill text"></textarea>
                                             </div>
                                             <div class="form-row form-city">
                                                 <label>City</label>
@@ -142,7 +138,6 @@
                     <span><a href="https://twitter.com/fightingirishlc" target="_blank"><img src="images/twitter.png"></a></span>           
                 </div>
             </div>
-
     </div>
 </div>
 </body>
