@@ -10,11 +10,13 @@ return array(
 
     // Publishable Key from Stripe.com Dashboard
     'publishable-key' => getenv(STRIPE_PUBLISHABLE_KEY),
-    
+
     'email-password' => getenv(EMAIL_PASSWORD),
 
     // Where to send upon successful donation (must include http://)
-    'thank-you'       => 'https://legacy-club.herokuapp.com/thankyou.html',
+    'thank-you'       => 'thankyou.html',
+
+    'thank-you-golf'  => 'registration-thank-you.html',
 
     // Who the email will be from.
     'email-from'      => 'info@legacyclub.ca',

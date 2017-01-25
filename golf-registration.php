@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Fighting Irish Legacy Club | St. Patrick's Fighting Irish | Donation Form</title>
+    <title>Fighting Irish Legacy Club | St. Patrick's Fighting Irish | Golf Registration Form</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" type="text/css" href="css/style.css?v1='123'" media="all">
     <script type="text/javascript" src="https://js.stripe.com/v2"></script>

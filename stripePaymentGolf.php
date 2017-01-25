@@ -106,7 +106,7 @@ if ($_POST) {
         }
 
         // Forward to "Thank You" page
-        header('Location: ' . $config['thank-you']);
+        header('Location: ' . $config['thank-you-golf']);
         exit;
 
     } catch (Exception $e) {
