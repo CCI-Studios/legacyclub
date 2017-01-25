@@ -66,13 +66,8 @@ if ($_POST) {
             'description' => 'Donation by ' . $name_bill,
             'amount'      => $amount * 100,
             'currency'    => 'cad',
-            "metadata" => array("Players" => $players, "Phone" => $phone_bill, "email" => $email_bill)
+            "metadata" => array("Players" => $players, "Phone" => $phone_bill, "email" => $email_bill, "Address" => $address_bill)
         ));
-
-        
-       // Build and send the email
-       // $headers = 'From: ' . $config['email-from'];
-       // $headers .= "\r\nBcc: " . $config['email-bcc'] . "\r\n\r\n";
 
        $find    = array('%amount%');
        $replace = array('$' . $amount);

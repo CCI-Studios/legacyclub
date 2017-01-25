@@ -48,11 +48,7 @@ $(function() {
 			$('.first-name').focus();
 			return false;
 		}
-		if ( $('.last-name').val() === '' ) {
-			outputError('Last name is required');
-			$('.last-name').focus();
-			return false;
-		}
+	
 		if ( $('.email').val() === '' ) {
 			outputError('Email is required');
 			$('.email').focus();
