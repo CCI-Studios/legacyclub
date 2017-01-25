@@ -1,4 +1,5 @@
-<?php require 'stripePayment.php'; ?>
+<?php require 'stripePayment.php';
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -141,12 +142,10 @@
                     <span><a href="https://twitter.com/fightingirishlc" target="_blank"><img src="images/twitter.png"></a></span>           
                 </div>
             </div>
-        </div>
-
-    </body>
-    <div class="wrapper">
-     
     </div>
+
+</body>
+  
 
     <script>if (window.Stripe) $('.donation-form').show()</script>
     <noscript><p>JavaScript is required for the donation form.</p></noscript>
