@@ -12,7 +12,7 @@
     <script type="text/javascript">
         Stripe.setPublishableKey('<?php echo $config['publishable-key'] ?>');
     </script>
-    <script type="text/javascript" src="golf.js"></script>
+    <script type="text/javascript" src="golf.js"></script>      
     <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
@@ -85,7 +85,7 @@
                                             </legend>
                                             <div class="form-row form-amount">
                                                 <label>Amount:</label>
-                                                <input type="text" disabled name="amount" value="100" class="amount text">
+                                                <input type="text" disabled name="amount" value="125" class="amount text">
                                             </div>
                                             <div class="form-row form-number">
                                                 <label>Card Number</label>
