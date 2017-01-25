@@ -27,7 +27,7 @@ $config = require('config.php'); ?>
                 <div id="content-inner">
                     <div id="top-text">
                         <div>
-                            <h1>Donation</h1>
+                            <h1>Golf Registration</h1>
                             <div class="form donation">
                                 <div class="messages">
                                     <!-- Error messages go here go here -->

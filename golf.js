@@ -10,8 +10,6 @@ $(function(){
 		
 		console.log($('fieldset.player-info').length);
 
-		
-
 		if($('fieldset.player-info').length < 4)
 		{
 			var set = $('#info-0').clone();
