@@ -39,36 +39,53 @@ $config = require('config.php'); ?>
                                             </legend>
                                             <div class="form-row form-first-name">
                                                 <label>Name</label>
-                                                <input type="text" name="player[1][first-name]" class="first-name text">
+                                                <input type="text" value="" name="player[1][first-name]" class="first-name text">
                                             </div>
                                             <div class="form-row form-email">
                                                 <label>Email</label>
-                                                <input type="text" name="player[1][email]" class="email text">
+                                                <input type="text" value="" name="player[1][email]" class="email text">
                                             </div>
                                             <div class="form-row form-phone">
                                                 <label>Phone</label>
-                                                <input type="text" name="player[1][phone]" class="phone text">
+                                                <input type="text" value="" name="player[1][phone]" class="phone text">
                                             </div>
                                             <div class="form-row form-address">
                                                 <label>Address</label>
-                                                <textarea name="player[1][address]" cols="30" rows="2" class="address text"></textarea>
+                                                <textarea name="player[1][address]" value="" cols="30" rows="2" class="address text"></textarea>
                                             </div>
                                             <div class="form-row form-city">
                                                 <label>City</label>
-                                                <input type="text" name="player[1][city]" class="city text">
+                                                <input type="text" value="" name="player[1][city]" class="city text">
                                             </div>
                                             <div class="form-row form-year">
                                                 <label>Year Graduated</label>
-                                                <input type="text" name="player[1][year]" class="year text">
+                                                <input type="text" value="" name="player[1][year]" class="year text">
                                             </div>
                                         </fieldset>
                                         <div id="add-player" class="button">Add Player</div>
                                         <fieldset>
+                                             <div class="form-row form-first-name">
+                                                <label>Name</label>
+                                                <input type="text" value="" name="name" class="first-name name-bill text">
+                                            </div>
+                                            <div class="form-row form-email">
+                                                <label>Email</label>
+                                                <input type="text" value="" name="email" class="email email-bill text">
+                                            </div>
+                                            <div class="form-row form-phone">
+                                                <label>Phone</label>
+                                                <input type="text" value="" name="phone" class="phone phone-bill text">
+                                            </div>
+                                            <div class="form-row form-address">
+                                                <label>Address</label>
+                                                <textarea name="address" value="" cols="30" rows="2" class="address address-bill text"></textarea>
+                                            </div>
                                             <legend>
                                                 Payment
                                             </legend>
                                             <div class="form-row form-amount">
-                                                <label>Amount:</label><input type="text" disable name="amount" value="" class="amount text">
+                                                <label>Amount:</label>
+                                                <input type="text" disabled name="amount" value="100" class="amount text">
                                             </div>
                                             <div class="form-row form-number">
                                                 <label>Card Number</label>

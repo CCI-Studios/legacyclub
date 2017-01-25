@@ -71,7 +71,7 @@ if ($_POST) {
 
         $mail->setFrom($config['email-from'], 'Legacy club');     //Set who the message is to be sent from
         $mail->addAddress($email, $first_name.' '.$last_name);  // Add a recipient
-        $mail->addBCC('bcc@example.com');
+        $mail->addBCC('hsanvaria@ccistudios.com');
         $mail->isHTML(true);                                  // Set email format to HTML
 
         $mail->Subject = $config['email-subject'];

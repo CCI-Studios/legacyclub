@@ -3,14 +3,18 @@
 $(function(){
 	
 	var count = 1;
+	var amount = 100;
 	$('#add-player').click(function(){
 
 		count++;
+		
 		console.log($('fieldset.player-info').length);
+
+		
+
 		if($('fieldset.player-info').length < 4)
 		{
 			var set = $('#info-0').clone();
-
 			$(set).each(function(i,value){
 
 				$(this).find('legend').text('Player #'+count);
@@ -23,6 +27,7 @@ $(function(){
 				
 				if($(this).find('input').length > 0)
 				{	
+					$(this).find('input').val('');
 					var str = $(this).find('input').attr('name');
 					var rest = str.substring(0, str.indexOf("[") + 1);
 					var last = str.substring(str.indexOf("]"), str.length);
@@ -30,6 +35,7 @@ $(function(){
 				}
 				else
 				{	
+					$(this).find('textarea').val('');
 					var str = $(this).find('textarea').attr('name');
 					var rest = str.substring(0, str.indexOf("[") + 1);
 					var last = str.substring(str.indexOf("]"), str.length);
@@ -39,6 +45,8 @@ $(function(){
 				console.log(value);
 			});
 			$(set).insertBefore('#add-player');
+			amount = amount+100;
+			$('input.amount').val(amount);
 		}
 		else
 		{
