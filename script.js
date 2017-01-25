@@ -86,7 +86,8 @@ $(function() {
 
 		// Create Stripe token, check if CC information correct
 		Stripe.createToken({
-			name      : $('.first-name').val() + ' ' + $('.last-name').val(),
+			name      : $('.name-bill').val(),
+		 	address_line1   : $('.address-bill').val(),
 			number    : $('.card-number').val(),
 			cvc       : $('.card-cvc').val(),
 			exp_month : $('.card-expiry-month').val(),

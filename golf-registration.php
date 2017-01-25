@@ -1,17 +1,18 @@
-<?php require 'stripePayment.php';
- ?>
+<?php require 'stripePaymentGolf.php';
+$config = require('config.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Fighting Irish Legacy Club | St. Patrick's Fighting Irish | Donation Form</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/style.css?v1='123'" media="all">
     <script type="text/javascript" src="https://js.stripe.com/v2"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript">
         Stripe.setPublishableKey('<?php echo $config['publishable-key'] ?>');
     </script>
+    <script type="text/javascript" src="golf.js"></script>
     <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
@@ -32,64 +33,59 @@
                                     <!-- Error messages go here go here -->
                                 </div>
                                   <form action="" method="POST" class="donation-form">
-                                        <fieldset>
+                                        <fieldset id="info-0" class='player-info'>
                                             <legend>
-                                                Contact Information
+                                                Player #1
                                             </legend>
                                             <div class="form-row form-first-name">
-                                                <label>First Name</label>
-                                                <input type="text" name="first-name" class="first-name text">
-                                            </div>
-                                            <div class="form-row form-last-name">
-                                                <label>Last Name</label>
-                                                <input type="text" name="last-name" class="last-name text">
+                                                <label>Name</label>
+                                                <input type="text" value="" name="player[1][first-name]" class="first-name text">
                                             </div>
                                             <div class="form-row form-email">
                                                 <label>Email</label>
-                                                <input type="text" name="email" class="email text">
+                                                <input type="text" value="" name="player[1][email]" class="email text">
                                             </div>
                                             <div class="form-row form-phone">
                                                 <label>Phone</label>
-                                                <input type="text" name="phone" class="phone text">
+                                                <input type="text" value="" name="player[1][phone]" class="phone text">
                                             </div>
                                             <div class="form-row form-address">
                                                 <label>Address</label>
-                                                <textarea name="address" cols="30" rows="2" class="address text"></textarea>
+                                                <textarea name="player[1][address]" value="" cols="30" rows="2" class="address text"></textarea>
                                             </div>
                                             <div class="form-row form-city">
                                                 <label>City</label>
-                                                <input type="text" name="city" class="city text">
+                                                <input type="text" value="" name="player[1][city]" class="city text">
                                             </div>
-                                            <div class="form-row form-state">
-                                                <label>State</label>
-                                                <select name="state" class="state text">
-                                                    <option value="AB">Alberta</option>
-                                                    <option value="BC">British Columbia</option>
-                                                    <option value="MB">Manitoba</option>
-                                                    <option value="NB">New Brunswick</option>
-                                                    <option value="NL">Newfoundland and Labrador</option>
-                                                    <option value="NS">Nova Scotia</option>
-                                                    <option value="ON">Ontario</option>
-                                                    <option value="PE">Prince Edward Island</option>
-                                                    <option value="QC">Quebec</option>
-                                                    <option value="SK">Saskatchewan</option>
-                                                    <option value="NT">Northwest Territories</option>
-                                                    <option value="NU">Nunavut</option>
-                                                    <option value="YT">Yukon</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-row form-zip">
-                                                <label>Zip</label>
-                                                <input type="text" name="zip" class="zip text">
+                                            <div class="form-row form-year">
+                                                <label>Year Graduated</label>
+                                                <input type="text" value="" name="player[1][year]" class="year text">
                                             </div>
                                         </fieldset>
-
+                                        <div id="add-player" class="button">Add Player</div>
                                         <fieldset>
-                                           <legend>
+                                             <div class="form-row form-first-name">
+                                                <label>Name</label>
+                                                <input type="text" value="" name="name" class="first-name name-bill text">
+                                            </div>
+                                            <div class="form-row form-email">
+                                                <label>Email</label>
+                                                <input type="text" value="" name="email" class="email email-bill text">
+                                            </div>
+                                            <div class="form-row form-phone">
+                                                <label>Phone</label>
+                                                <input type="text" value="" name="phone" class="phone phone-bill text">
+                                            </div>
+                                            <div class="form-row form-address">
+                                                <label>Address</label>
+                                                <textarea name="address" value="" cols="30" rows="2" class="address address-bill text"></textarea>
+                                            </div>
+                                            <legend>
                                                 Payment
                                             </legend>
                                             <div class="form-row form-amount">
-                                                <label>Amount:</label> <input type="text" name="amount" class="amount text">
+                                                <label>Amount:</label>
+                                                <input type="text" disabled name="amount" value="100" class="amount text">
                                             </div>
                                             <div class="form-row form-number">
                                                 <label>Card Number</label>
@@ -142,12 +138,10 @@
                     <span><a href="https://twitter.com/fightingirishlc" target="_blank"><img src="images/twitter.png"></a></span>           
                 </div>
             </div>
+        </div>
 
-    </div>
-</div>
-</body>
+    </body>
   
-
     <script>if (window.Stripe) $('.donation-form').show()</script>
     <noscript><p>JavaScript is required for the donation form.</p></noscript>
 

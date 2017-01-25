@@ -26,6 +26,8 @@ return array(
     'email-subject'   => 'Thank you for your donation!',
 
     // Email message. %name% is the donor's name. %amount% is the donation amount
-    'email-message'   => "Dear %name%,\n\nThank you for your donation of %amount%. We rely on the financial support from people like you to keep our cause alive. Below is your donation receipt to keep for your records."
+    'email-message'   => "Dear %name%,\n\nThank you for your donation of %amount%. We rely on the financial support from people like you to keep our cause alive. Below is your donation receipt to keep for your records.",
+
+    'email-message-golf' => "Thank you for your donation of %amount%. We rely on the financial support from people like you to keep our cause alive. Below is your donation receipt to keep for your records."
 
 );
