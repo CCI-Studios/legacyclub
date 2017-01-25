@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <title>Fighting Irish Legacy Club | St. Patrick's Fighting Irish | Golf Registration Form</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="stylesheet" type="text/css" href="css/style.css?v1='123'" media="all">
+    <link rel="stylesheet" type="text/css" href="css/style.css?v1='133'" media="all">
     <script type="text/javascript" src="https://js.stripe.com/v2"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript">
