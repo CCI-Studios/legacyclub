@@ -26,7 +26,7 @@ if ($_POST) {
     $players = '';
 
     $amount = count($_POST['player']);
-    $amount = $amount*100;
+    $amount = $amount*125;
 
     $name_bill = $_POST['name'];
     $email_bill = $_POST['email'];

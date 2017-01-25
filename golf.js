@@ -43,7 +43,7 @@ $(function(){
 				console.log(value);
 			});
 			$(set).insertBefore('#add-player');
-			amount = amount+100;
+			amount = amount+125;
 			$('input.amount').val(amount);
 		}
 		else
