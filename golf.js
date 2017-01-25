@@ -3,7 +3,7 @@
 $(function(){
 	
 	var count = 1;
-	var amount = 100;
+	var amount = 125;
 	$('#add-player').click(function(){
 
 		count++;
