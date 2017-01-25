@@ -85,7 +85,7 @@
                                             </legend>
                                             <div class="form-row form-amount">
                                                 <label>Amount:</label>
-                                                <input type="text" disabled name="amount" value="125" class="amount text">
+                                                <input type="text" disabled name="amount" value="125" class="amount disabled text">
                                             </div>
                                             <div class="form-row form-number">
                                                 <label>Card Number</label>

@@ -542,6 +542,11 @@ form textarea
 	text-align: center;
 }
 
+.disabled
+{
+	background: rgba(0,0,0,0.1);
+}
+
 .messages {
 	margin: 6px;
 	background-color: #efe1e1;
