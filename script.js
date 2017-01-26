@@ -11,10 +11,15 @@ $(function() {
 		$('.messages')
 			.html('<p>' + error + '</p>')
 			.addClass('active');
-		$('.submit')
+		$('.donation .submit')
 			.removeProp('disabled')
 			.val('Submit Donation');
+
+		$('.donation.golf .submit')
+			.removeProp('disabled')
+			.val('Process Payment');
 	};
+	
 	var stripeResponseHandler = function(status, response) {
 		if (response.error) {
 			outputError(response.error.message);
@@ -43,15 +48,44 @@ $(function() {
 			.val('Processing...');
 
 		// Very simple validation
+
+		$('fieldset.player-info input').each(function(){
+
+			if($(this).val() === '')
+			{
+				$(this).focus();
+				return false;
+			}
+
+		});
+
 		if ( $('.first-name').val() === '' ) {
-			outputError('First name is required');
-			$('.first-name').focus();
+			outputError('Name is required');
+			$('.first-name').not('.first-name.name-bill').focus();
+			return false;
+		}
+
+		if ( $('.first-name.name-bill').val() === '' ) {
+			outputError('Card Name is required');
+			$('.name-bill').focus();
+			return false;
+		}
+
+		if ( $('.email.email-bill').val() === '' ) {
+			outputError('Email is required');
+			$('.email-bill').focus();
+			return false;
+		}
+
+		if ( $('.address.address-bill').val() === '' ) {
+			outputError('Address is required');
+			$('.address-bill').focus();
 			return false;
 		}
 	
 		if ( $('.email').val() === '' ) {
 			outputError('Email is required');
-			$('.email').focus();
+			$('.email').not('.email.email-bill').focus();
 			return false;
 		}
 		if ( $('.phone').val() === '' ) {
@@ -61,7 +95,7 @@ $(function() {
 		}
 		if ( $('.address').val() === '' ) {
 			outputError('Address is required');
-			$('.address').focus();
+			$('.address').not('.address.address-bill').focus();
 			return false;
 		}
 		if ( $('.city').val() === '' ) {

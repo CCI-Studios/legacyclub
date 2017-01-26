@@ -28,11 +28,11 @@
                     <div id="top-text">
                         <div>
                             <h1>Golf Registration</h1>
-                            <div class="form donation">
+                            <div class="form donation golf">
                                 <div class="messages">
                                     <!-- Error messages go here go here -->
                                 </div>
-                                  <form action="" method="POST" class="donation-form">
+                                  <form action="" method="POST" class="donation-form golf-form">
                                         <fieldset id="info-0" class='player-info'>
                                             <legend>
                                                 Player #1
@@ -43,7 +43,7 @@
                                             </div>
                                             <div class="form-row form-email">
                                                 <label>Email</label>
-                                                <input type="text" value="" name="player[1][email]" class="email text">
+                                                <input type="email" value="" name="player[1][email]" class="email text">
                                             </div>
                                             <div class="form-row form-phone">
                                                 <label>Phone</label>
@@ -70,7 +70,7 @@
                                             </div>
                                             <div class="form-row form-email">
                                                 <label>Email</label>
-                                                <input type="text" value="" name="email" class="email email-bill text">
+                                                <input type="email" value="" name="email" class="email email-bill text">
                                             </div>
                                             <div class="form-row form-phone">
                                                 <label>Phone</label>
