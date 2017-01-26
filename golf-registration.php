@@ -121,7 +121,7 @@
                                                 </select>
                                             </div>
                                             <div class="form-row form-submit">
-                                                <input type="submit" class="submit" value="Submit Donation">
+                                                <input type="submit" class="submit" value="Process Payment">
                                             </div>
                                         </fieldset>
                                 </form>
