@@ -12,7 +12,7 @@
     <script type="text/javascript">
         Stripe.setPublishableKey('<?php echo $config['publishable-key'] ?>');
     </script>
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="js/donateform.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -140,11 +140,9 @@
             </div>
     </div>
 </div>
-</body>
-  
 
-    <script>if (window.Stripe) $('.donation-form').show()</script>
-    <noscript><p>JavaScript is required for the donation form.</p></noscript>
+<script>if (window.Stripe) $('.donation-form').show()</script>
+<noscript><p>JavaScript is required for the donation form.</p></noscript>
 
 </body>
 </html>
