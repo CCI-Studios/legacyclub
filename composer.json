@@ -3,12 +3,7 @@
         "ext-mbstring": "*",
         "stripe/stripe-php": "3.*",
         "sendgrid/sendgrid": "~5.1",
-        "drewm/mailchimp-api": "^2.3"
-    },
-  	"autoload":{
-	    "classmap": ["inc/MCAPI.class.php"]
-  	},
-    "require-dev": {
+        "drewm/mailchimp-api": "^2.3",
         "vlucas/phpdotenv": "^2.4"
     }
 }
