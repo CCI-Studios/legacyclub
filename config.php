@@ -3,8 +3,10 @@
 require("vendor/autoload.php");
 
 //optionally load env vars from a .env file for local dev
-$dotenv = new Dotenv\Dotenv(__DIR__);
-$dotenv->load();
+if (!getenv("STRIPE_SECRET_KEY")) {
+  $dotenv = new Dotenv\Dotenv(__DIR__);
+  $dotenv->load();
+}
 
 return array(
   'STRIPE_SECRET_KEY' => getenv("STRIPE_SECRET_KEY"),
