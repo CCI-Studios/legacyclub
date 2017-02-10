@@ -536,6 +536,88 @@ button
 	font-weight: 600;
 }
 
+.golf-heading
+{
+	text-align: center;
+	margin-bottom: 80px;
+}
+.golf-heading img
+{
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
+}
+.golf-heading h3
+{
+	font-weight: bold;
+	font-style: italic;
+	max-width: 600px;
+	margin: 0 auto;
+	font-size: 1.5em;
+	text-transform: none;
+}
+.golf-heading p
+{
+	font-size: 1.15em;
+	font-weight: 600;
+}
+.golf-button-container
+{
+	max-width: 620px;
+	margin: 40px auto;
+	overflow: hidden;
+}
+.golf-button
+{
+	display: block;
+	background: #062c49;
+	color: white;
+	width: 45%;
+	float: left;
+	text-decoration: none;
+}
+.golf-button:before
+{
+	content: "";
+	display: block;
+	width: 100%;
+	padding-bottom: 100%;
+	background: no-repeat center center;
+	background-size: 70% auto
+}
+.golf-button-first
+{
+	margin-right: 10%;
+}
+.golf-button-first:before
+{
+	background-image: url(../images/golfers-white.png);
+}
+.golf-button-first:hover:before
+{
+	background-image: url(../images/golfers-gold.png);
+}
+.golf-button-last:before
+{
+	background-image: url(../images/helmet-white.png);
+}
+.golf-button-last:hover:before
+{
+	background-image: url(../images/helmet-gold.png);
+}
+.golf-button span
+{
+	display: block;
+	padding: 12px 6px;
+	background: #bba363;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1em;
+	text-align: center;
+}
+
+
+
 
 @media screen and (max-width: 767px)
 {

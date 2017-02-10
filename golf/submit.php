@@ -22,8 +22,9 @@ foreach($_POST['player'] as $key => $value) {
   $address    = $value['address'] . "\n" . $value['city'];
   $email      = $value['email'];
   $phone      = $value['phone'];
+  $graduated  = $value['year'];
 
-  $playerInfo = "Name: ".$name.","." Address: ".$address.","." Email: ".$email.","." Phone: ".$phone;
+  $playerInfo = "Name: ".$name.","." Address: ".$address.","." Email: ".$email.","." Phone: ".$phone." Graduated: ".$graduated;
 
   $player[] = $playerInfo;
 }
@@ -48,20 +49,38 @@ try {
     "metadata" => array("Players" => $players, "Phone" => $phone_bill, "email" => $email_bill, "Address" => $address_bill)
   ));
 
-  //make the email content
-  $find    = array('%amount%');
-  $replace = array('$' . $amount);
-  $message = "Thank you for your donation of %amount%. We rely on the financial support from people like you to keep our cause alive. Below is your donation receipt to keep for your records.";
-  $message = str_replace($find, $replace , $message)."</br>";
+  //make the email content to the user
+  date_default_timezone_set('America/Toronto');
+  $date = date('M j, Y, g:ia');
+  $message = "<p>Thank you for registering for the 2017 Count On Me Golf Tournament.</p><p>This yearly event is presented by the Fighting Irish Legacy Club and all proceeds will go to support St. Patrick's Fighting Irish Football.</p><p>Your registration details are as follows:</p>";
   $message .= '<p>'.$players.'</p>';
   $message .= '<p>Amount: $' . $amount . "</p>";
-  $message .= '<p>Date: ' . date('M j, Y, g:ia', $donation['created']) . "</p>";
+  $message .= '<p>Date Registered: ' . $date . "</p>";
   $message .= '<p>Transaction ID: ' . $donation['id'] . "</p>";
+  $message .= "<p>We very much appreciate your support and look forward to seeing you on July 15th, 2017 at Huron Oaks!</p>";
+  $message .= "<p>Count On Me,<br>Fighting Irish Legacy Club</p>";
+  $message .= "<p><a href='https://www.legacyclub.ca'>www.legacyclub.ca</a></p>";
   
   //send email to user
   $from = new SendGrid\Email($config['FROM_EMAIL_NAME'], $config['FROM_EMAIL_ADDRESS']);
-  $subject = "Golf Registration";
+  $subject = "Count On Me Golf Tournament Registration 2017";
   $to = new SendGrid\Email($name_bill, $email_bill);
+  $content = new SendGrid\Content("text/html", $message);
+  $mail = new SendGrid\Mail($from, $subject, $to, $content);
+  $sg = new \SendGrid($config['SENDGRID_API_KEY']);
+  $response = $sg->client->mail()->send()->post($mail);
+  
+  //make the email content to the admin
+  $message = "<p>Golf registration details are as follows:</p>";
+  $message .= '<p>'.$players.'</p>';
+  $message .= '<p>Amount: $' . $amount . "</p>";
+  $message .= '<p>Date Registered: ' . $date . "</p>";
+  $message .= '<p>Transaction ID: ' . $donation['id'] . "</p>";
+  
+  //send email to admin
+  $from = new SendGrid\Email($config['FROM_EMAIL_NAME'], $config['FROM_EMAIL_ADDRESS']);
+  $subject = "Count On Me Golf Tournament Registration 2017";
+  $to = new SendGrid\Email($config['FROM_EMAIL_NAME'], "cmorris@ccistudios.com");
   $content = new SendGrid\Content("text/html", $message);
   $mail = new SendGrid\Mail($from, $subject, $to, $content);
   $sg = new \SendGrid($config['SENDGRID_API_KEY']);

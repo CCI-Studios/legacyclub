@@ -1,6 +1,18 @@
 <?php require("head.php"); ?>
 
-<h1>Full Website Coming Soon</h1>
+<div class="golf-heading">
+<h2><img src="/images/golf.png" alt="Count On Me Golf Tournament" /></h2>
+<h3>Join us for a scramble golf tournament in support of St. Patrick’s Fighting Irish Football</h3>
+<p><strong>When:</strong> Saturday, July 15, 2017, Shotgun start at Noon<br>
+	<strong>Where:</strong> Huron Oaks Golf Course<br>
+	<strong>Cost:</strong> $125 per person (includes 18 holes of golf, cart &amp; dinner)
+</p>
+<div class="golf-button-container">
+	<a href="/golf" class="golf-button golf-button-first"><span>Click here to register</span></a>
+	<a href="/images/FILC%20-%20Golf%20Tournament%20-%20Sponsorship%20Package%202017.pdf" target="_blank" class="golf-button golf-button-last"><span>Click here to sponsor [PDF]</span></a>
+</div>
+</div>
+
 <h3>Stay up to date with the fighting irish</h3>
 <div class="form-signup">
 	<form id="signup" action="/ajax/subscribe.php" method="post">

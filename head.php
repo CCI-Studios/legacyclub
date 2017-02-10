@@ -8,8 +8,8 @@ $config = require(__DIR__.'/config.php');
     <title>Fighting Irish Legacy Club | St. Patrick's Fighting Irish</title>
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/style.css" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,800,800i" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/style.css?v=2" media="all">
     <script type="text/javascript" src="/js/jquery-1.11.0.min.js"></script>
 </head>
 <body>
