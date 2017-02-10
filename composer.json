@@ -2,10 +2,13 @@
     "require": { 
         "ext-mbstring": "*",
         "stripe/stripe-php": "3.*",
-        "phpmailer/phpmailer": "~5.2"
+        "sendgrid/sendgrid": "~5.1",
+        "drewm/mailchimp-api": "^2.3"
     },
-    "name":"goldenplanet/mailchimp",
   	"autoload":{
 	    "classmap": ["inc/MCAPI.class.php"]
-  	}
+  	},
+    "require-dev": {
+        "vlucas/phpdotenv": "^2.4"
+    }
 }

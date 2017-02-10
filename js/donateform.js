@@ -5,8 +5,6 @@
 
 $(function() {
 	var $form        = $('.donation-form');
-	var $otherAmount = $form.find('.other-amount');
-	var $amount      = $form.find('.amount');
 	var outputError = function(error) {
 		$('.messages')
 			.html('<p>' + error + '</p>')
@@ -29,21 +27,11 @@ $(function() {
 			$form.get(0).submit();
 		}
 	};
-	var disableinput = function(amount) {
-		$amount
-			.val(amount)
-			.blur()
-			.prop('disabled');
-	};
-	var enableinput = function() {
-		$amount
-			.removeProp('disabled')
-			.focus();
-	};
 
-	$('.donation-form').on('submit', function(event) {
+	$form.on('submit', function(e) {
+		e.preventDefault();
 		// Disable processing button to prevent multiple submits
-		$('.submit')
+		$form.find('button[type=submit]')
 			.prop('disabled', true)
 			.val('Processing...');
 
@@ -110,7 +98,7 @@ $(function() {
 		}
 		if ( $('.amount').val() === '' ) {
 			outputError('Please make a donation amount');
-			$('.other-amount').trigger('click');
+			$('.amount').focus();
 			return false;
 		}
 
@@ -123,25 +111,6 @@ $(function() {
 			exp_month : $('.card-expiry-month').val(),
 			exp_year  : $('.card-expiry-year').val()
 		}, stripeResponseHandler);
-
-		return false;
-	});
-
-	$('.form-amount label').on('click', function() {
-		var $label = $(this);
-
-		$label.addClass('active').parent().children('label').removeClass('active');
-
-		if ( $label.index() === 6 ) {
-			enableinput();
-		} else {
-			disableinput($label.find('.set-amount').val());
-		}
-
-	});
-
-	$amount.on('change', function() {
-		$otherAmount.val($(this).val());
 	});
 
 });

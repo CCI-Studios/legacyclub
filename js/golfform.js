@@ -1,14 +1,11 @@
-
-
 $(function(){
 	
+	var $form = $(".golf-form");
 	var count = 1;
 	var amount = 125;
-	$('#add-player').click(function(){
+	$('.add-player').click(function(){
 
 		count++;
-		
-		console.log($('fieldset.player-info').length);
 
 		if($('fieldset.player-info').length < 4)
 		{
@@ -40,16 +37,46 @@ $(function(){
 					
 					$(this).find('textarea').attr('name',rest+count+last);
 				}
-				console.log(value);
 			});
-			$(set).insertBefore('#add-player');
+			$(set).insertBefore('.add-player');
 			amount = amount+125;
 			$('input.amount').val(amount);
 		}
-		else
-		{
-			$('<p class="error">You can only add upto 4 players</p>').insertAfter('#add-player');
+		if (count == 4) {
+			$(".add-player").hide();
 		}
 	});
-
+	
+	$form.on('submit', function(e) {
+		e.preventDefault();
+		// Disable processing button to prevent multiple submits
+		$form.find('button[type=submit]')
+			.prop('disabled', true)
+			.text('Processing...');
+		
+		// Create Stripe token, check if CC information correct
+		Stripe.createToken({
+			name      : $('.name-bill').val(),
+		 	address_line1: $('.address-bill').val(),
+			number    : $('.card-number').val(),
+			cvc       : $('.card-cvc').val(),
+			exp_month : $('.card-expiry-month').val(),
+			exp_year  : $('.card-expiry-year').val()
+		}, stripeResponseHandler);
+	});
+	function outputError(error) {
+		$('.messages').html('<p>' + error + '</p>');
+		$form.find('button[type=submit]')
+			.removeProp('disabled')
+			.text('Process Payment');
+	}
+	function stripeResponseHandler(status, response) {
+		if (response.error) {
+			outputError(response.error.message);
+		} else {
+			var token = response['id'];
+			$form.append('<input type="hidden" name="stripeToken" value="' + token + '">');
+			$form.get(0).submit();
+		}
+	}
 });
