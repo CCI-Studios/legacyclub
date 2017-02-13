@@ -34,7 +34,7 @@
 				<input name="email" id="email" type="email" required />
 			</label>
 		</div>
-		<div>
+		<div class="form-submit">
 			<button class="submit" type="submit">Submit</button>
 		</div>
 	</form>
