@@ -1,15 +1,16 @@
-<?php require("head.php"); ?>
+<?php require("../head.php"); ?>
 
-<div class="home-golf-heading golf-heading">
-	<div class="presents1">Fighting Irish Legacy Club</div>
-	<div class="presents2">presents the</div>
-	<h2><img src="/images/golf-title-white.png" alt="Count On Me Golf Tournament" /></h2>
+<div class="golf-heading">
+	<h2><img src="/images/golf-title.png" alt="Count On Me Golf Tournament" /></h2>
 	<h3>Join us for a scramble golf tournament in support of St. Patrick’s Fighting Irish Football</h3>
 	<p><strong>When:</strong> Saturday, July 15, 2017, Shotgun start at Noon<br>
 		<strong>Where:</strong> Huron Oaks Golf Course<br>
 		<strong>Cost:</strong> $125 per person (includes 18 holes of golf, cart &amp; dinner)
 	</p>
-	<div class="click-here-to-register"><a href="/golf/info" class="button">Click here to register</a></div>
+	<div class="golf-button-container">
+		<a href="/golf/registration" class="golf-button golf-button-first"><span>Click here to register</span></a>
+		<a href="/images/FILC%20-%20Golf%20Tournament%20-%20Sponsorship%20Package%202017.pdf" target="_blank" class="golf-button golf-button-last"><span>Click here to sponsor [PDF]</span></a>
+	</div>
 </div>
 
 <h3>Stay up to date with the fighting irish</h3>
@@ -33,7 +34,7 @@
 				<input name="email" id="email" type="email" required />
 			</label>
 		</div>
-		<div class="form-submit">
+		<div>
 			<button class="submit" type="submit">Submit</button>
 		</div>
 	</form>
@@ -72,4 +73,4 @@
 	});
 </script>
 
-<?php require("foot.php"); ?>
+<?php require("../foot.php"); ?>

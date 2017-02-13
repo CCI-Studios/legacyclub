@@ -80,7 +80,7 @@ try {
   //send email to admin
   $from = new SendGrid\Email($config['FROM_EMAIL_NAME'], $config['FROM_EMAIL_ADDRESS']);
   $subject = "Count On Me Golf Tournament Registration 2017";
-  $to = new SendGrid\Email($config['FROM_EMAIL_NAME'], "cmorris@ccistudios.com");
+  $to = new SendGrid\Email($config['FROM_EMAIL_NAME'], $config['ADMIN_EMAIL']);
   $content = new SendGrid\Content("text/html", $message);
   $mail = new SendGrid\Mail($from, $subject, $to, $content);
   $sg = new \SendGrid($config['SENDGRID_API_KEY']);

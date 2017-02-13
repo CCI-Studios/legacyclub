@@ -23,10 +23,19 @@ legend
 	text-transform: uppercase;
 	font-weight: bold;
 }
-
+h1
+{
+	padding-bottom: 10px;
+	color: #056839;
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+}
 h3
 {
 	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 40px;
 }
 
 p
@@ -135,7 +144,7 @@ h1
 {	
 	font-size: 60px;
 	font-weight: normal;
-    letter-spacing: 5px;
+  letter-spacing: 5px;
 	font-family: 'Dancing Script', cursive;
 }
 
@@ -174,21 +183,6 @@ p.logo-text
 	margin:0 auto;
 	padding: 0px 10px 0px;
 	overflow: hidden;
-}
-
-#content-inner h3
-{
-	margin-bottom: 20px;
-	margin-top: 40px;
-}
-
-#content h1
-{
-	padding-bottom: 10px;
-	color: #056839;
-	text-align: center;
-	font-weight: bold;
-	text-transform: uppercase;
 }
 
 #coming-soon p
@@ -386,9 +380,10 @@ p.logo-text
     margin-bottom: 20px;
 }
 
-button
+button,
+.button
 {
-	display: block;
+	display: inline-block;
 	background: #bba363;
 	min-width: 182px;
 	color: white;
@@ -400,12 +395,15 @@ button
 	font-family: inherit;
 	font-size: inherit;
 	text-align: center;
+	text-decoration: none;
+	font-weight: 600;
 	-webkit-appearance: none;
 	appearance: none;
 }
 
 .add-player
 {
+	display: block;
 	margin-bottom: 20px;
 }
 
@@ -479,7 +477,7 @@ button
 	width: 90px;
 }
 
-.donation-form .form-submit {
+.form-submit {
 	margin: 15px 0;
 	text-align: center;
 }
@@ -552,7 +550,7 @@ button
 	font-weight: bold;
 	font-style: italic;
 	max-width: 600px;
-	margin: 0 auto;
+	margin: 40px auto 20px auto;
 	font-size: 1.5em;
 	text-transform: none;
 }
@@ -615,6 +613,35 @@ button
 	font-size: 1em;
 	text-align: center;
 }
+
+.home-golf-heading
+{
+	padding: 40px 20px;
+	background: url(../images/bg-golf.jpg) no-repeat left bottom;
+	background-size: cover;
+	color: white;
+	font-weight: 600;
+	text-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+}
+.home-golf-heading h3
+{
+	color: white;
+	margin-top: 20px;
+}
+.home-golf-heading .presents1
+{
+	font-size: 1.5em;
+	font-weight: 800;
+	font-style: italic;
+}
+.home-golf-heading .button
+{
+	text-shadow: none;
+	font-weight: 800;
+}
+
+
+
 
 
 
