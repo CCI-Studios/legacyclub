@@ -33,12 +33,6 @@
                   <textarea name="player[1][address]" value="" cols="30" rows="2" class="address text" required></textarea>
                 </label>
             </div>
-            <div class="form-row form-city">
-                <label>
-                  <span class="field-label">City</span>
-                  <input type="text" value="" name="player[1][city]" class="city text" required>
-                </label>
-            </div>
             <div class="form-row form-year">
                 <label>
                   <span class="field-label">Year Graduated</span>
