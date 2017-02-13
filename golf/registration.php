@@ -118,7 +118,7 @@
             <div class="form-row form-submit">
                 <button type="submit" class="submit">Process Payment</button>
             </div>
-            <div id="messages"></div>
+            <div class="messages"></div>
         </fieldset>
         <input type="hidden" name="numPlayers" value="1">
     </form>

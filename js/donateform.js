@@ -6,9 +6,7 @@
 $(function() {
 	var $form        = $('.donation-form');
 	var outputError = function(error) {
-		$('.messages')
-			.html('<p>' + error + '</p>')
-			.addClass('active');
+		$('.messages').html('<p>' + error + '</p>');
 		$('.donation .submit')
 			.removeProp('disabled')
 			.val('Submit Donation');
