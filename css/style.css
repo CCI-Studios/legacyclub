@@ -607,7 +607,7 @@ button,
 .home-golf-heading
 {
 	padding: 40px 20px;
-	background: url(../images/bg-golf.jpg) no-repeat left bottom;
+	background: url(../images/bg-golf.jpg?v=1) no-repeat left bottom;
 	background-size: cover;
 	color: white;
 	font-weight: 600;
