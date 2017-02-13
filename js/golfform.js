@@ -18,33 +18,25 @@ $(function(){
 				$(this).attr('id',fieldset+''+count);
 			});
 
-			$(set).find('.form-row').each(function(i,value){
-				
-				if($(this).find('input').length > 0)
-				{	
-					$(this).find('input').val('');
-					var str = $(this).find('input').attr('name');
-					var rest = str.substring(0, str.indexOf("[") + 1);
-					var last = str.substring(str.indexOf("]"), str.length);
-					$(this).find('input').attr('name',rest+count+last);
-				}
-				else
-				{	
-					$(this).find('textarea').val('');
-					var str = $(this).find('textarea').attr('name');
-					var rest = str.substring(0, str.indexOf("[") + 1);
-					var last = str.substring(str.indexOf("]"), str.length);
-					
-					$(this).find('textarea').attr('name',rest+count+last);
-				}
-			});
+			$(set).find("input, textarea").val("");
+			$(set).find("legend").append('<a href="#" class="remove-player">remove</a>');
 			$(set).insertBefore('.add-player');
-			amount = amount+125;
+			amount = count*125;
 			$('input.amount').val(amount);
+			$("[name=numPlayers]").val(count);
 		}
 		if (count == 4) {
 			$(".add-player").hide();
 		}
+	});
+	$form.on("click",".remove-player", function(e){
+		e.preventDefault();
+		$(this).closest("fieldset").remove();
+		count--;
+		$(".add-player").show();
+		amount = count*125;
+		$('input.amount').val(amount);
+		$("[name=numPlayers]").val(count);
 	});
 	
 	$form.on('submit', function(e) {

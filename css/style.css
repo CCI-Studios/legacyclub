@@ -406,6 +406,13 @@ button,
 	display: block;
 	margin-bottom: 20px;
 }
+.remove-player
+{
+	color: #bba363;
+	font-size: 0.7em;
+	display: inline-block;
+	margin-left: 12px;
+}
 
 #response
 {

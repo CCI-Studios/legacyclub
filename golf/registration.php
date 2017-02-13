@@ -12,31 +12,31 @@
             <div class="form-row form-first-name">
                 <label>
                   <span class="field-label">Name</span>
-                  <input type="text" value="" name="player[1][first-name]" class="first-name text" required>
+                  <input type="text" value="" name="player[first-name][]" class="first-name text" required>
                 </label>
             </div>
             <div class="form-row form-email">
                 <label>
                   <span class="field-label">Email</span>
-                  <input type="email" value="" name="player[1][email]" class="email text" required>
+                  <input type="email" value="" name="player[email][]" class="email text" required>
                 </label>
             </div>
             <div class="form-row form-phone">
                 <label>
                   <span class="field-label">Phone</span>
-                  <input type="tel" value="" name="player[1][phone]" class="phone text" required>
+                  <input type="tel" value="" name="player[phone][]" class="phone text" required>
                 </label>
             </div>
             <div class="form-row form-address">
                 <label>
                   <span class="field-label">Address</span>
-                  <textarea name="player[1][address]" value="" cols="30" rows="2" class="address text" required></textarea>
+                  <textarea name="player[address][]" value="" cols="30" rows="2" class="address text" required></textarea>
                 </label>
             </div>
             <div class="form-row form-year">
                 <label>
                   <span class="field-label">Year Graduated</span>
-                  <input type="number" value="" name="player[1][year]" class="year text" required>
+                  <input type="number" value="" name="player[year][]" class="year text" required>
                 </label>
             </div>
         </fieldset>
@@ -118,7 +118,9 @@
             <div class="form-row form-submit">
                 <button type="submit" class="submit">Process Payment</button>
             </div>
+            <div id="messages"></div>
         </fieldset>
+        <input type="hidden" name="numPlayers" value="1">
     </form>
 </div>
 <div id="response"></div>

@@ -8,7 +8,7 @@ $player = [];
 $total = 0;
 $players = '';
 
-$amount = count($_POST['player']);
+$amount = count($_POST['player']['first-name']);
 $amount = $amount*125;
 
 $name_bill = $_POST['name'];
@@ -16,13 +16,12 @@ $email_bill = $_POST['email'];
 $phone_bill = $_POST['phone'];
 $address_bill = $_POST['address'];
 
-foreach($_POST['player'] as $key => $value) {
-  $first_name = $value['first-name'];
-  $name       = $first_name;
-  $address    = $value['address'];
-  $email      = $value['email'];
-  $phone      = $value['phone'];
-  $graduated  = $value['year'];
+for($i=0; $i<(int)$_POST['numPlayers']; $i++) {
+  $name = $_POST['player']['first-name'][$i];
+  $address    = $_POST['player']['address'][$i];
+  $email      = $_POST['player']['email'][$i];
+  $phone      = $_POST['player']['phone'][$i];
+  $graduated  = $_POST['player']['year'][$i];
 
   $playerInfo = "Name: ".$name.","." Address: ".$address.","." Email: ".$email.","." Phone: ".$phone." Graduated: ".$graduated;
 
