@@ -62,7 +62,7 @@
                 </div>
                 <div class="form-row form-zip">
                     <label>
-                      <span class="field-label">Zip</span>
+                      <span class="field-label">Postal Code</span>
                       <input type="text" name="zip" class="zip text">
                     </label>
                 </div>
