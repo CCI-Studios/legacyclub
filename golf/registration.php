@@ -130,9 +130,7 @@
 <script type="text/javascript">
     Stripe.setPublishableKey('<?php echo $config['STRIPE_PUBLISHABLE_KEY']; ?>');
 </script>
-<script type="text/javascript" src="/js/golfform.js"></script>      
-<script type="text/javascript" src="/js/donateform.js"></script>
-
+<script type="text/javascript" src="/js/golfform.js?v=1"></script>
 <script>if (window.Stripe) $('.golf-form').show()</script>
 
 <?php require("../foot.php"); ?>
