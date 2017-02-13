@@ -9,7 +9,7 @@
 		<strong>Where:</strong> Huron Oaks Golf Course<br>
 		<strong>Cost:</strong> $125 per person (includes 18 holes of golf, cart &amp; dinner)
 	</p>
-	<div class="click-here-to-register"><a href="/golf/info" class="button">Click here to register</a></div>
+	<div class="click-here-to-register"><a href="/golf" class="button">Click here to register</a></div>
 </div>
 
 <h3>Stay up to date with the fighting irish</h3>
