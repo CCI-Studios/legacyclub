@@ -42,7 +42,7 @@
                 </div>
                 <div class="form-row form-state">
                     <label>
-                      <span class="field-label">State</span>
+                      <span class="field-label">Province</span>
                       <select name="state" class="state text">
                           <option value="AB">Alberta</option>
                           <option value="BC">British Columbia</option>
