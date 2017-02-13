@@ -22,7 +22,7 @@ $(function(){
 			$(set).find("legend").append('<a href="#" class="remove-player">remove</a>');
 			$(set).insertBefore('.add-player');
 			amount = count*125;
-			$('input.amount').val(amount);
+			$('input.amount').val("CAD$"+amount+".00");
 			$("[name=numPlayers]").val(count);
 		}
 		if (count == 4) {
@@ -35,7 +35,7 @@ $(function(){
 		count--;
 		$(".add-player").show();
 		amount = count*125;
-		$('input.amount').val(amount);
+		$('input.amount').val("CAD$"+amount+".00");
 		$("[name=numPlayers]").val(count);
 	});
 	

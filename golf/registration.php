@@ -71,7 +71,7 @@
             <div class="form-row form-amount">
                 <label>
                   <span class="field-label">Amount</span>
-                  <input type="text" disabled name="amount" value="125" class="amount disabled text">
+                  <input type="text" disabled name="amount" value="CAD$125.00" class="amount disabled text">
                 </label>
             </div>
             <div class="form-row form-number">
