@@ -45,7 +45,7 @@ try {
     'description' => 'Golf Registration for ' . count($player) . ' players',
     'amount'      => $amount * 100,
     'currency'    => 'cad',
-    "metadata" => array("Players" => $players, "Phone" => $phone_bill, "email" => $email_bill, "Address" => $address_bill)
+    "metadata" => array("Name" => $name_bill, "Phone" => $phone_bill, "email" => $email_bill, "Address" => $address_bill)
   ));
 
   //make the email content to the user
