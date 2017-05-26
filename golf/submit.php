@@ -22,8 +22,9 @@ for($i=0; $i<(int)$_POST['numPlayers']; $i++) {
   $email      = $_POST['player']['email'][$i];
   $phone      = $_POST['player']['phone'][$i];
   $graduated  = $_POST['player']['year'][$i];
+  $shirt  = $_POST['player']['shirt'][$i];
 
-  $playerInfo = "Name: ".$name.","." Address: ".$address.","." Email: ".$email.","." Phone: ".$phone." Graduated: ".$graduated;
+  $playerInfo = "Name: ".$name.","." Address: ".$address.","." Email: ".$email.","." Phone: ".$phone." Graduated: ".$graduated." Shirt Size: ".$shirt;
 
   $player[] = $playerInfo;
 }

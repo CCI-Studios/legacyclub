@@ -91,6 +91,54 @@ label
 	font-size: 14px;
 	text-transform: uppercase;
 }
+.form-radios label
+{
+	display: inline-block;
+	margin-right: 25px;
+	position: relative;
+	padding-left: 25px;
+	cursor: pointer;
+	font-weight: normal;
+}
+.form-radios label:before
+{
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 17px;
+	box-sizing: border-box;
+	border: 1px solid #bba363;
+	border-radius: 17px;
+	width: 17px;
+	height: 17px;
+}
+.form-radios input + span:after
+{
+	content: "";
+	display: block;
+	position: absolute;
+	cursor: pointer;
+	top: 4px;
+	left: 4px;
+	width: 9px;
+	height: 9px;
+	border-radius: 9px;
+	transition: background 0.25s;
+}
+.form-radios input:checked + span:after
+{
+	background: #bba363;
+}
+.form-radios input
+{
+	position: absolute;
+	left: -999999px;
+	width: 1px;
+	height: 0;
+	border: 0;
+}
 
 .vendor
 {
@@ -629,6 +677,13 @@ button,
 	text-shadow: none;
 	font-weight: 800;
 }
+.form-shirt-size > label > span
+{
+	padding-bottom: 0;
+}
+
+
+
 
 
 

@@ -39,6 +39,33 @@
                   <input type="number" value="" name="player[year][]" class="year text" required>
                 </label>
             </div>
+            <div class="form-row form-shirt-size">
+                <label>
+                  <span class="field-label">T-Shirt Size</span>
+                </label>
+                <div class="form-radios">
+                  <label>
+                    <input type="radio" value="S" name="player[shirt][]" class="shirt radio">
+                    <span>SMALL</span>
+                  </label>
+                  <label>
+                    <input type="radio" value="M" name="player[shirt][]" class="shirt radio">
+                    <span>MEDIUM</span>
+                  </label>
+                  <label>
+                    <input type="radio" value="L" name="player[shirt][]" class="shirt radio">
+                    <span>LARGE</span>
+                  </label>
+                  <label>
+                    <input type="radio" value="XL" name="player[shirt][]" class="shirt radio">
+                    <span>XL</span>
+                  </label>
+                  <label>
+                    <input type="radio" value="XXL" name="player[shirt][]" class="shirt radio">
+                    <span>XXL</span>
+                  </label>
+                </div>
+            </div>
         </fieldset>
         <button type="button" class="add-player">Add Player</button>
         <fieldset>
@@ -130,7 +157,7 @@
 <script type="text/javascript">
     Stripe.setPublishableKey('<?php echo $config['STRIPE_PUBLISHABLE_KEY']; ?>');
 </script>
-<script type="text/javascript" src="/js/golfform.js?v=1"></script>
+<script type="text/javascript" src="/js/golfform.js?v=2"></script>
 <script>if (window.Stripe) $('.golf-form').show()</script>
 
 <?php require("../foot.php"); ?>

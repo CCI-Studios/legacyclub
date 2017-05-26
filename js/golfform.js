@@ -18,7 +18,8 @@ $(function(){
 				$(this).attr('id',fieldset+''+count);
 			});
 
-			$(set).find("input, textarea").val("");
+			$(set).find("input:not([type=radio]), textarea").val("");
+			$(set).find("input[type=radio]").prop("checked",false);
 			$(set).find("legend").append('<a href="#" class="remove-player">remove</a>');
 			$(set).insertBefore('.add-player');
 			amount = count*125;
