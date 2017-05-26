@@ -19,7 +19,7 @@ $(function(){
 			});
 
 			$(set).find("input:not([type=radio]), textarea").val("");
-			$(set).find("input[type=radio]").prop("checked",false);
+			$(set).find("input[type=radio]").prop("checked",false).attr("name","player[shirt]["+(count-1)+"]");
 			$(set).find("legend").append('<a href="#" class="remove-player">remove</a>');
 			$(set).insertBefore('.add-player');
 			amount = count*125;
