@@ -16,5 +16,5 @@ return array(
   'MAILCHIMP_LIST_ID' => 'a9e6859009',
   'FROM_EMAIL_ADDRESS' => 'info@legacyclub.ca',
   'FROM_EMAIL_NAME' => 'Fighting Irish Legacy Club',
-  'ADMIN_EMAIL' => 'info@legacyclub.ca'
+  'ADMIN_EMAIL' => getenv("ADMIN_EMAIL")
 );
