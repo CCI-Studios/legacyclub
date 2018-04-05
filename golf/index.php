@@ -1,11 +1,11 @@
 <?php require("../head.php"); ?>
 
 <div class="golf-heading">
-	<h2><img src="/images/golf-title.png" alt="Count On Me Golf Tournament" /></h2>
+	<h2><img src="/images/golf-title-2018.png" alt="Count On Me Golf Tournament" /></h2>
 	<h3>Join us for a scramble golf tournament in support of St. Patrick’s Fighting Irish Football</h3>
-	<p><strong>When:</strong> Saturday, July 15, 2017, Shotgun start at Noon<br>
+	<p><strong>When:</strong> Saturday, July 14, 2018, 12pm Registration/Lunch, 1pm Shotgun Start<br>
 		<strong>Where:</strong> Huron Oaks Golf Course<br>
-		<strong>Cost:</strong> $125 per person (includes 18 holes of golf, cart &amp; dinner)
+		<strong>Cost:</strong> $125 per person (includes 18 holes of golf, cart, lunch &amp; dinner)
 	</p>
 	<div class="golf-button-container">
 		<a href="/golf/registration" class="golf-button golf-button-first"><span>Click here to register</span></a>

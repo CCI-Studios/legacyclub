@@ -1,15 +1,9 @@
 <?php require("head.php"); ?>
 
-<div class="home-golf-heading golf-heading">
-	<div class="presents1">Fighting Irish Legacy Club</div>
-	<div class="presents2">presents the</div>
-	<h2><img src="/images/golf-title-white.png" alt="Count On Me Golf Tournament" /></h2>
-	<h3>Join us for a scramble golf tournament in support of St. Patrick’s Fighting Irish Football</h3>
-	<p><strong>When:</strong> Saturday, July 15, 2017, Shotgun start at Noon<br>
-		<strong>Where:</strong> Huron Oaks Golf Course<br>
-		<strong>Cost:</strong> $125 per person (includes 18 holes of golf, cart &amp; dinner)
-	</p>
-	<div class="click-here-to-register"><a href="/golf" class="button">Click here to register</a></div>
+<div class="home-golf-heading">
+	<a href="/golf">
+		<img src="/images/golf2018.png" alt="2nd Annual Count On Me Golf Tournament. Saturday, July 14, 2018 at Huron Oaks Golf Course. $125 per person. Registration/Lunch: 12pm. Shotgun Start: 1pm. Includes: Green fees, cart, lunch, dinner contests. Join us for a scramble golf tournament in support of St. Patrick's Fighting Irish Football. Click here to register. The Fighting Irish Legacy Club is an independent non-profit organization that is not directly affiliated with St. Patrick's High School or the St. Clair Catholic District School Board." />
+	</a>
 </div>
 
 <h3>Stay up to date with the fighting irish</h3>

@@ -652,14 +652,11 @@ button,
 	text-align: center;
 }
 
-.home-golf-heading
+.home-golf-heading img
 {
-	padding: 40px 20px;
-	background: url(../images/bg-golf.jpg?v=1) no-repeat left bottom;
-	background-size: cover;
-	color: white;
-	font-weight: 600;
-	text-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+	display: block;
+	width: 100%;
+	height: auto;
 }
 .home-golf-heading h3
 {

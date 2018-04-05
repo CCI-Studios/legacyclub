@@ -35,10 +35,33 @@ $(function(){
 		$(this).closest("fieldset").remove();
 		count--;
 		$(".add-player").show();
-		amount = count*125;
+		updatePrice();
+	});
+	$form.on("click","input[name=type]", function () {
+		if ($form.find("input[name=type]:checked").val() === "golf") {
+			$form.find(".player-info").show().removeAttr("disabled");
+			count = $form.find(".player-info").length;
+			if (count < 4) {
+				$form.find(".add-player").show();
+			}
+		} else {
+			count = 0;
+			$form.find(".player-info").hide().attr("disabled", "disabled");
+			$form.find(".player-info, .add-player").hide();
+		}
+		updatePrice();
+	});
+
+	function updatePrice () {
+		if ($form.find("input[name=type]:checked").val() === "golf") {
+			amount = count*125;
+		} else {
+			count = 0;
+			amount = 40;
+		}
 		$('input.amount').val("CAD$"+amount+".00");
 		$("[name=numPlayers]").val(count);
-	});
+	}
 	
 	$form.on('submit', function(e) {
 		e.preventDefault();

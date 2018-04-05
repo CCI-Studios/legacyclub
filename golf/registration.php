@@ -7,6 +7,21 @@
     </div>
     <noscript><p>JavaScript is required for the registration form.</p></noscript>
     <form action="/golf/submit" method="POST" class="golf-form">
+
+        <fieldset>
+            <legend>Registration Type</legend>
+            <div class="form-radios">
+                <label>
+                    <input type="radio" value="golf" name="type" class="radio" checked>
+                    <span>Golf</span>
+                </label>
+                <label>
+                    <input type="radio" value="dinner" name="type" class="radio">
+                    <span>Dinner Only</span>
+                </label>
+            </div>
+        </fieldset>
+
         <fieldset id="info-0" class='player-info'>
             <legend>Player #1</legend>
             <div class="form-row form-first-name">
@@ -25,12 +40,6 @@
                 <label>
                   <span class="field-label">Phone</span>
                   <input type="tel" value="" name="player[phone][]" class="phone text" required>
-                </label>
-            </div>
-            <div class="form-row form-address">
-                <label>
-                  <span class="field-label">Address</span>
-                  <textarea name="player[address][]" value="" cols="30" rows="2" class="address text" required></textarea>
                 </label>
             </div>
             <div class="form-row form-year">
@@ -131,14 +140,14 @@
                       <option value="12">December</option>
                   </select>
                   <select class="card-expiry-year text" required>
-                    <option value="2017" selected>2017</option>
-                    <option value="2018">2018</option>
+                    <option value="2018" selected>2018</option>
                     <option value="2019">2019</option>
                     <option value="2020">2020</option>
                     <option value="2021">2021</option>
                     <option value="2022">2022</option>
                     <option value="2023">2023</option>
                     <option value="2024">2024</option>
+                    <option value="2025">2025</option>
                   </select>
                 </label>
             </div>
