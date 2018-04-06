@@ -141,8 +141,11 @@ try {
   $content = new SendGrid\Content("text/html", $message);
   $mail = new SendGrid\Mail($from, $subject, $to, $content);
   if (isset($config['ADMIN_CC_EMAIL']) && $config['ADMIN_CC_EMAIL']) {
-    $cc = new SendGrid\Email(null, $config['ADMIN_CC_EMAIL']);
-    $mail->personalization[0]->addCC($cc);
+    $cc_addresses = explode(',', $config['ADMIN_CC_EMAIL']);
+    foreach ($cc_addresses as $cc_address) {
+      $cc = new SendGrid\Email(null, $cc_address);
+      $mail->personalization[0]->addCC($cc);
+    }
   }
   $sg = new \SendGrid($config['SENDGRID_API_KEY']);
   $response = $sg->client->mail()->send()->post($mail);
