@@ -9,7 +9,7 @@
 	</p>
 	<div class="golf-button-container">
 		<a href="/golf/registration" class="golf-button golf-button-first"><span>Click here to register</span></a>
-		<a href="/images/FILC%20-%20Golf%20Tournament%20-%20Sponsorship%20Package%202017.pdf" target="_blank" class="golf-button golf-button-last"><span>Click here to sponsor [PDF]</span></a>
+		<a href="/images/Legacy%20Club%20-%20Sponsorship%20Package%20-%202018.pdf" target="_blank" class="golf-button golf-button-last"><span>Click here to sponsor [PDF]</span></a>
 	</div>
 </div>
 
