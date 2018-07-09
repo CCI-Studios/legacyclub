@@ -139,7 +139,8 @@
                       <option value="11">November</option>
                       <option value="12">December</option>
                   </select>
-                  <select class="card-expiry-year text" required>
+                </label>
+                <select class="card-expiry-year text" required>
                     <option value="2018" selected>2018</option>
                     <option value="2019">2019</option>
                     <option value="2020">2020</option>
@@ -148,8 +149,7 @@
                     <option value="2023">2023</option>
                     <option value="2024">2024</option>
                     <option value="2025">2025</option>
-                  </select>
-                </label>
+                </select>
             </div>
             <div class="form-row form-submit">
                 <button type="submit" class="submit">Process Payment</button>
