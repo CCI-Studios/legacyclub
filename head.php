@@ -16,7 +16,7 @@ $config = require(__DIR__.'/config.php');
     <div id="wrapper">
             <div id="header">
                 <div id="header-inner">
-                    <div id="logo"><a href="/"><img src="/images/logo.png?v=2" alt="Fighting Irish Legacy Club"></a></div>
+                    <div id="logo"><a href="/"><img src="/images/logo.png?v=2" alt="Fighting Irish Legacy Club" width="250"></a></div>
                 </div>
             </div>
         
