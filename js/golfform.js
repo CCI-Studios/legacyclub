@@ -2,7 +2,7 @@ $(function(){
 	
 	var $form = $(".golf-form");
 	var count = 1;
-	var amount = 125;
+	var amount = 150;
 	$('.add-player').click(function(){
 
 		count++;
@@ -22,7 +22,7 @@ $(function(){
 			$(set).find("input[type=radio]").prop("checked",false).attr("name","player[shirt]["+(count-1)+"]");
 			$(set).find("legend").append('<a href="#" class="remove-player">remove</a>');
 			$(set).insertBefore('.add-player');
-			amount = count*125;
+			amount = count*150;
 			$('input.amount').val("CAD$"+amount+".00");
 			$("[name=numPlayers]").val(count);
 		}
@@ -54,7 +54,7 @@ $(function(){
 
 	function updatePrice () {
 		if ($form.find("input[name=type]:checked").val() === "golf") {
-			amount = count*125;
+			amount = count*150;
 		} else {
 			count = 0;
 			amount = 40;

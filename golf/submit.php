@@ -17,7 +17,7 @@ if ($_POST['type'] == "golf") {
 if ($isDinnerOnly) {
   $amount = 40;
 } else {
-  $amount = count($_POST['player']['first-name']) * 125;
+  $amount = count($_POST['player']['first-name']) * 150;
 }
 
 $name_bill = $_POST['name'];

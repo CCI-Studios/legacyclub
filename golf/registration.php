@@ -107,7 +107,7 @@
             <div class="form-row form-amount">
                 <label>
                   <span class="field-label">Amount</span>
-                  <input type="text" disabled name="amount" value="CAD$125.00" class="amount disabled text">
+                  <input type="text" disabled name="amount" value="CAD$150.00" class="amount disabled text">
                 </label>
             </div>
             <div class="form-row form-number">
@@ -141,14 +141,15 @@
                   </select>
                 </label>
                 <select class="card-expiry-year text" required>
-                    <option value="2018" selected>2018</option>
-                    <option value="2019">2019</option>
-                    <option value="2020">2020</option>
+                    <option value="2020" selected>2020</option>
                     <option value="2021">2021</option>
                     <option value="2022">2022</option>
                     <option value="2023">2023</option>
                     <option value="2024">2024</option>
                     <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
                 </select>
             </div>
             <div class="form-row form-submit">
