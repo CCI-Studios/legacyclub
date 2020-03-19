@@ -2,7 +2,7 @@
 
 <div class="home-golf-heading">
 	<a href="/golf/">
-		<img src="/images/golf-info-2020.png" alt="" />
+		<img src="/images/golf-info-2020.jpg" alt="" />
 	</a>
 </div>
 
