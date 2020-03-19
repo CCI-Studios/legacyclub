@@ -99,7 +99,7 @@ try {
   //make the email content to the user
   date_default_timezone_set('America/Toronto');
   $date = date('M j, Y, g:ia');
-  $message = "<p>Thank you for registering for the 2019 Count On Me Golf Tournament.</p><p>This yearly event is presented by the Fighting Irish Legacy Club and all proceeds will go to support St. Patrick's Fighting Irish Football.</p><p>Your registration details are as follows:</p>";
+  $message = "<p>Thank you for registering for the 2020 Count On Me Golf Tournament.</p><p>This yearly event is presented by the Fighting Irish Legacy Club and all proceeds will go to support both St. Patrick's Fighting Irish Football and football in the Sarnia-Lambton community.</p><p>Your registration details are as follows:</p>";
   if ($isDinnerOnly) {
     $message .= '<p>Dinner registration only.</p>';
     $message .= "<p>$name_bill<br>$email_bill</p>";
@@ -109,13 +109,13 @@ try {
   $message .= '<p>Amount: $' . $amount . "</p>";
   $message .= '<p>Date Registered: ' . $date . "</p>";
   $message .= '<p>Transaction ID: ' . $donation['id'] . "</p>";
-  $message .= "<p>We very much appreciate your support and look forward to seeing you on July 13th, 2019 at Huron Oaks!</p>";
+  $message .= "<p>We very much appreciate your support and look forward to seeing you on July 18th, 2020 at Huron Oaks!</p>";
   $message .= "<p>Count On Me,<br>Fighting Irish Legacy Club</p>";
   $message .= "<p><a href='https://www.legacyclub.ca'>www.legacyclub.ca</a></p>";
   
   //send email to user
   $from = new SendGrid\Email($config['FROM_EMAIL_NAME'], $config['FROM_EMAIL_ADDRESS']);
-  $subject = "Count On Me Golf Tournament Registration 2019";
+  $subject = "Count On Me Golf Tournament Registration 2020";
   $to = new SendGrid\Email($name_bill, $email_bill);
   $content = new SendGrid\Content("text/html", $message);
   $mail = new SendGrid\Mail($from, $subject, $to, $content);
@@ -136,7 +136,7 @@ try {
   
   //send email to admin
   $from = new SendGrid\Email($config['FROM_EMAIL_NAME'], $config['FROM_EMAIL_ADDRESS']);
-  $subject = "Count On Me Golf Tournament Registration 2019";
+  $subject = "Count On Me Golf Tournament Registration 2020";
   $to = new SendGrid\Email($config['FROM_EMAIL_NAME'], $config['ADMIN_EMAIL']);
   $content = new SendGrid\Content("text/html", $message);
   $mail = new SendGrid\Mail($from, $subject, $to, $content);

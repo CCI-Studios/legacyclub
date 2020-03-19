@@ -1,11 +1,11 @@
 <?php require("../head.php"); ?>
 
 <div class="golf-heading">
-	<h2><img src="/images/golf-title-2019.png" alt="Count On Me Golf Tournament" width="450" /></h2>
+	<h2><img src="/images/golf-title-2020.png" alt="Count On Me Golf Tournament" width="450" /></h2>
 	<h3>Join us for a scramble golf tournament in support of St. Patrick’s Fighting Irish Football</h3>
-	<p><strong>When:</strong> Saturday, July 13, 2019, 12pm Registration/Lunch, 1pm Shotgun Start<br>
+	<p><strong>When:</strong> Saturday, July 18, 2020, 12pm Registration/Lunch, 1pm Shotgun Start<br>
 		<strong>Where:</strong> Huron Oaks Golf Course<br>
-		<strong>Cost:</strong> $125 per person (includes 18 holes of golf, cart, lunch &amp; dinner)
+		<strong>Cost:</strong> $150 per person (includes 18 holes of golf, cart, on-course promotions, lunch &amp; dinner)
 	</p>
 	<div class="golf-button-container">
 		<a href="/golf/registration" class="golf-button golf-button-first"><span>Click here to register</span></a>
