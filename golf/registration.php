@@ -1,6 +1,6 @@
 <?php require("../head.php"); ?>
 
-<h1>Golf Registration</h1>
+<h1>2025 Golf Tournament Registration</h1>
 <div class="form donation golf">
     <div class="messages">
         <!-- Error messages go here go here -->
