@@ -1,8 +1,8 @@
 <?php require("head.php"); ?>
 
 <div class="home-golf-heading">
-	<a href="/golf/">
-		<img src="/images/golf-info-2020.jpg" alt="" />
+	<a href="/golf/registration">
+		<img src="/images/filc2025golf.png" alt="" />
 	</a>
 </div>
 
