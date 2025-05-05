@@ -1,6 +1,7 @@
 {
     "require": { 
         "php": "^8.2.19",
+        "composer-plugin-api": "^1",
         "ext-mbstring": "*",
         "stripe/stripe-php": "3.*",
         "sendgrid/sendgrid": "~5.1",
